@@ -12,6 +12,7 @@ body {
 }
 #container {
   min-height: 98.5vh;
+  overflow: hidden;
 }
 
 .nav-bar {
@@ -30,16 +31,27 @@ body {
   display: grid;
   place-items: center;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .nav-bar li:first-child {
   font-size: 1.25rem;
+  font-weight: 900;
   padding: 0;
 }
 
 .nav-bar li a {
   color: white;
   text-decoration: none;
+}
+
+.btn {
+  background: hsl(10, 61%, 61%);
+  color: #fff;
+  outline: none;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid hsl(9, 66%, 77%);
 }
 
 /* Footer>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -65,6 +77,9 @@ footer {
   }
   .nav-bar li {
     width: 25%;
+  }
+  .nav-bar li:hover {
+    background-color: rgb(139, 148, 161);
   }
   .nav-bar li:first-child a {
     font-size: 1.25rem;

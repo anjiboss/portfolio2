@@ -1,0 +1,12 @@
+.main {
+  background: #fff;
+  width: 80vw;
+  margin: 15vh auto;
+  padding: 3vh;
+}
+
+#read-main {
+  opacity: 0;
+  font-size: 15pt;
+  margin: 0px 0px 0px 90vw;
+}
