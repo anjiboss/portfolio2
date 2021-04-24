@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-image: url(../images/sunset-bg.jpg);
+  background-size: 150%;
+}
+#container {
+  min-height: 98.5vh;
+}
+
+.nav-bar {
+  height: 5vh;
+  min-height: 80px;
+  display: flex;
+  padding: 3vh;
+  background-color: hsl(9, 66%, 77%);
+  font-size: 0.75rem;
+}
+
+.nav-bar li {
+  list-style: none;
+  width: 15%;
+  border-radius: 19px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.nav-bar li:first-child {
+  font-size: 1.25rem;
+  padding: 0;
+}
+
+.nav-bar li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+footer {
+  background: black;
+  color: white;
+  font-size: 0.5rem;
+  text-align: right;
+}
+/*  */
+
+/* Hover Effect >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.nav-bar li:hover {
+  background: hsl(10, 61%, 61%);
+}
+
+/* End Hover Effect*************************** */
+
+/* On PHONE */
+@media screen and (max-width: 720px) {
+  .nav-bar {
+    background: rgb(139, 148, 161);
+  }
+  .nav-bar li {
+    width: 25%;
+  }
+  .nav-bar li:first-child a {
+    font-size: 1.25rem;
+  }
+  .nav-bar a {
+    font-weight: 900;
+  }
+  body {
+    /* background-position: center; */
+    background-image: url(../images/phone-bg.jpg);
+    background-size: 100%;
+  }
+}
+/*  */

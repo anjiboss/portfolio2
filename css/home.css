@@ -1,0 +1,21 @@
+#welcome-box {
+  color: white;
+  width: 80%;
+  text-shadow: 2px 2px 8px #040303;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.about-me {
+  color: #fff;
+  text-shadow: 2px 2px 8px #040303;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
