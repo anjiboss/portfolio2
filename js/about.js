@@ -25,7 +25,7 @@ anime({
 });
 anime({
   targets: ".main",
-  translateX: "1000px",
+  translateX: "2000px",
   duration: "500",
   delay: "16000",
   easing: "easeInOutQuad",
@@ -41,7 +41,7 @@ $("#read-main").click(() => {
     $("#read-main").html(`もう一度読む`);
     anime({
       targets: ".main",
-      translateX: "1000px",
+      translateX: "2000px",
       duration: "1000",
       delay: "0",
       // easing: "easeInOutQuad",
