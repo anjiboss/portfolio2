@@ -1,5 +1,7 @@
-const mainText = document.querySelectorAll(".introduce p");
-// const introduce = document.getElementById("intr-btn");
+const intrText = document.querySelectorAll(".introduce p");
+const hobbyText = document.querySelectorAll(".hobby p");
+const techText = document.querySelectorAll(".technical p");
+
 const introduce = $("#intr-btn");
 const hobby = $("#hobby-btn");
 const tech = $("#tech-btn");
@@ -16,6 +18,16 @@ const go = (target) => {
     easing: "easeInOutQuad",
   });
 };
+const outputWord = (target) => {
+  anime({
+    targets: target,
+    opacity: ["0", "1"],
+    easing: "easeInOutQuad",
+    delay: function (el, i, l) {
+      return i * 1000 + 1000;
+    },
+  });
+};
 
 let curDisplay = _introduce;
 go([_hobby, _tech]);
@@ -29,32 +41,20 @@ anime({
 anime({
   targets: ".introduce",
   opacity: ["0", "1"],
+  borderRadius: ["0", "19"],
   duration: "500",
   easing: "easeInOutQuad",
   delay: "500",
 });
 
-anime({
-  targets: ".introduce",
-  borderRadius: ["0", "19px"],
-  duration: "5000",
-  easing: "easeInOutQuad",
-});
-
-anime({
-  targets: mainText,
-  opacity: ["0", "1"],
-  easing: "easeInOutQuad",
-  delay: function (el, i, l) {
-    return i * 1500 + 1000;
-  },
-});
+outputWord(intrText);
 
 introduce.click(() => {
   if (curDisplay !== _introduce) {
     go(curDisplay);
     curDisplay = _introduce;
     back(_introduce);
+    outputWord(intrText);
   }
 });
 
@@ -63,6 +63,7 @@ tech.click(() => {
     go(curDisplay);
     curDisplay = _tech;
     back(_tech);
+    outputWord(techText);
   }
 });
 hobby.click(() => {
@@ -70,6 +71,7 @@ hobby.click(() => {
     go(curDisplay);
     curDisplay = _hobby;
     back(_hobby);
+    outputWord(hobbyText);
   }
 });
 
@@ -78,6 +80,12 @@ const back = (target) => {
     targets: target,
     translateX: "0px",
     duration: "500",
+    easing: "easeInOutQuad",
+  });
+  anime({
+    targets: target,
+    borderRadius: ["0", "19px"],
+    duration: "1500",
     easing: "easeInOutQuad",
   });
 };

@@ -10,6 +10,11 @@ body {
   background-image: url(../images/sunset-bg.jpg);
   background-size: 150%;
 }
+a {
+  text-decoration: none;
+  color: hsl(307, 100%, 52%);
+  font-weight: 900;
+}
 #container {
   min-height: 98.5vh;
   max-width: 100vw;
@@ -48,12 +53,15 @@ body {
 }
 
 .btn {
+  width: 150px;
+  height: 30px;
   background: hsl(10, 61%, 61%);
   color: #fff;
   outline: none;
   padding: 3px;
   border-radius: 10px;
   border: 2px solid hsl(9, 66%, 77%);
+  cursor: pointer;
 }
 
 /* Footer>>>>>>>>>>>>>>>>>>>>>>>>>>>> */

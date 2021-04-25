@@ -2,8 +2,8 @@
   background: #fff;
   width: 80vw;
   height: 60vh;
-  margin: 15vh 10vw;
-  padding: 3vh;
+  margin: 4vh 10vw;
+  padding: 5vh 3vh 3vh 3vh;
   position: absolute;
 }
 
@@ -12,6 +12,19 @@
   font-size: 15pt;
   margin: 0px 0px 0px 90vw;
 }
+.btn-container {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+table tr,
+td {
+  border: 1px solid #aaa;
+}
+
+tr td:first-child {
+  font-weight: 900;
+}
 
 @media screen and (max-width: 720px) {
   .article {
@@ -19,5 +32,10 @@
   }
   #read-main {
     font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .article {
+    font-size: 0.65rem;
   }
 }
