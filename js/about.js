@@ -1,7 +1,33 @@
-const mainText = document.querySelectorAll(".main p");
+const mainText = document.querySelectorAll(".introduce p");
+// const introduce = document.getElementById("intr-btn");
+const introduce = $("#intr-btn");
+const hobby = $("#hobby-btn");
+const tech = $("#tech-btn");
+
+const _introduce = document.getElementsByClassName("introduce");
+const _hobby = document.getElementsByClassName("hobby");
+const _tech = document.getElementsByClassName("technical");
+
+const go = (target) => {
+  anime({
+    targets: target,
+    translateX: "2000px",
+    duration: "500",
+    easing: "easeInOutQuad",
+  });
+};
+
+let curDisplay = _introduce;
+go([_hobby, _tech]);
+anime({
+  targets: [_hobby, _tech],
+  opacity: ["0", "1"],
+  delay: "500",
+  duration: "1",
+});
 
 anime({
-  targets: ".main",
+  targets: ".introduce",
   opacity: ["0", "1"],
   duration: "500",
   easing: "easeInOutQuad",
@@ -9,7 +35,7 @@ anime({
 });
 
 anime({
-  targets: ".main",
+  targets: ".introduce",
   borderRadius: ["0", "19px"],
   duration: "5000",
   easing: "easeInOutQuad",
@@ -23,37 +49,35 @@ anime({
     return i * 1500 + 1000;
   },
 });
-anime({
-  targets: ".main",
-  translateX: "2000px",
-  duration: "500",
-  delay: "16000",
-  easing: "easeInOutQuad",
-});
 
-let readMainFlag = true;
-setTimeout(() => {
-  $("#read-main").css("opacity", "1");
-}, 16000);
-$("#read-main").click(() => {
-  readMainFlag = !readMainFlag;
-  if (readMainFlag) {
-    $("#read-main").html(`もう一度読む`);
-    anime({
-      targets: ".main",
-      translateX: "2000px",
-      duration: "1000",
-      delay: "0",
-      // easing: "easeInOutQuad",
-    });
-  } else {
-    anime({
-      targets: ".main",
-      translateX: "0px",
-      duration: "1000",
-      delay: "0",
-      // easing: "easeInOutQuad",
-    });
-    $("#read-main").html(`隠す`);
+introduce.click(() => {
+  if (curDisplay !== _introduce) {
+    go(curDisplay);
+    curDisplay = _introduce;
+    back(_introduce);
   }
 });
+
+tech.click(() => {
+  if (curDisplay !== _tech) {
+    go(curDisplay);
+    curDisplay = _tech;
+    back(_tech);
+  }
+});
+hobby.click(() => {
+  if (curDisplay !== _hobby) {
+    go(curDisplay);
+    curDisplay = _hobby;
+    back(_hobby);
+  }
+});
+
+const back = (target) => {
+  anime({
+    targets: target,
+    translateX: "0px",
+    duration: "500",
+    easing: "easeInOutQuad",
+  });
+};

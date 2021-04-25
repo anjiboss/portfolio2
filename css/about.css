@@ -1,12 +1,23 @@
-.main {
+.article {
   background: #fff;
   width: 80vw;
-  margin: 15vh auto;
+  height: 60vh;
+  margin: 15vh 10vw;
   padding: 3vh;
+  position: absolute;
 }
 
 #read-main {
   opacity: 0;
   font-size: 15pt;
   margin: 0px 0px 0px 90vw;
+}
+
+@media screen and (max-width: 720px) {
+  .article {
+    font-size: 0.75rem;
+  }
+  #read-main {
+    font-size: 0.75rem;
+  }
 }
