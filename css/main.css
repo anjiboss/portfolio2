@@ -62,6 +62,7 @@ a {
   border-radius: 10px;
   border: 2px solid hsl(9, 66%, 77%);
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* Footer>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -76,6 +77,9 @@ footer {
 /* Hover Effect >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 .nav-bar li:hover {
   background: hsl(10, 61%, 61%);
+}
+.btn:hover {
+  background: hsl(9, 66%, 77%);
 }
 
 /* End Hover Effect*************************** */

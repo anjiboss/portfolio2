@@ -1,0 +1,27 @@
+article {
+  width: 90vw;
+  height: 80vh;
+  background: cornsilk;
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 5px;
+  padding: 30px;
+  overflow: scroll;
+}
+.tr {
+  display: flex;
+  border: 1px solid #aaa;
+  font-size: 0.8rem;
+}
+.tr div:last-child {
+  padding: 15px;
+}
+.tr div:first-child {
+  text-align: center;
+  width: 10vw;
+  height: 8vw;
+  margin: 3px;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+}

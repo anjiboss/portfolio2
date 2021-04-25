@@ -1,0 +1,70 @@
+#contact {
+  width: 85vw;
+  height: 60vh;
+  /* opacity: 0.5; */
+  background-color: lavender;
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 5vh;
+}
+label {
+  font-weight: 900;
+}
+#contact input,
+textarea {
+  margin: 3vh;
+}
+input[type="text"] {
+  width: 40%;
+  border-radius: 15px;
+  outline: none;
+  height: 30px;
+  text-align: center;
+  transition: 0.5s;
+  border: 1px solid #8aba3d;
+}
+input[type="text"]:focus {
+  width: 50%;
+  border: 2px solid #d84a05;
+}
+textarea {
+  width: 70%;
+  height: 40%;
+  outline: none;
+  padding: 10px;
+  transition: 0.5s;
+}
+textarea:focus {
+  box-shadow: 2px 0px 18px #d84a05;
+}
+input[type="submit"] {
+  width: 30%;
+  background: #d9f9a5;
+  border-radius: 5px;
+  border: 1px solid #49661b;
+}
+
+input[type="submit"]:hover {
+  color: white;
+  background-color: #49661b;
+}
+
+.sns-container {
+  width: 60vw;
+  margin: auto;
+  padding-top: 3vh;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sns-container div {
+  cursor: pointer;
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

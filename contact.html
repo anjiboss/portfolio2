@@ -9,6 +9,7 @@
       src="https://code.jquery.com/jquery-3.3.1.min.js"
     ></script>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <title>Bui Van Tuyen</title>
   </head>
   <body>
@@ -33,11 +34,40 @@
         </nav>
       </header>
       <form method="post" id="contact">
-        Name<input type="text" id="name" /><br />
-        Text<textarea id="text"></textarea><br />
+        <label for="name">Contact Me:</label><br />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          autocomplete="cc-name"
+          placeholder="Name"
+        /><br />
+        <textarea id="text"></textarea><br />
 
         <input type="submit" value="Submit" />
       </form>
+      <div class="sns-container">
+        <div
+          id="fb"
+          style="background-image: url(./images/icon/fb.png)"
+          onClick="window.location.href='https://www.facebook.com/anjitakashi/'"
+        ></div>
+        <div
+          id="git"
+          style="background-image: url(./images/icon/git.png)"
+          onClick="window.location.href='https://github.com/anjiboss'"
+        ></div>
+        <div
+          id="email"
+          style="background-image: url(./images/icon/mail.png)"
+          onClick="window.location.href='https://mail.google.com/mail/u/0/?fs=1&to=nhu.nhu.face@gmail.com&tf=cm'"
+        ></div>
+        <div
+          id="email"
+          style="background-image: url(./images/icon/stack.png)"
+          onClick="window.location.href='https://stackoverflow.com/users/14558664/takashi-anji'"
+        ></div>
+      </div>
     </div>
     <footer>
       <p>&copy;Bui Van Tuyen 2021</p>

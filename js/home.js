@@ -40,3 +40,9 @@ anime({
     return i * 800 + 4500;
   },
 });
+
+// Start the Back-end Server
+
+fetch("https://anji-portfolio-server.herokuapp.com/kidoshitekure")
+  .then((res) => res.text())
+  .then((txt) => console.log(txt));
