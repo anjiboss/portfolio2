@@ -1,6 +1,6 @@
 $("#contact").submit((e) => {
   e.preventDefault();
-  fetch("https://anji-portfolio-server.herokuapp.com//api/contact", {
+  fetch("https://anji-portfolio-server.herokuapp.com/api/contact", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
